@@ -3,16 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  background-color: "bg-slate-100";
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 241, 245, 249;
+    --background-end-rgb: 241, 245, 249;
   }
 }
 
@@ -24,4 +22,17 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.profile-image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c3/NGC_4414_%28NASA-med%29.jpg");
+}
+
+.blog-logo {
+  width: 160px;
+  height: 160px;
+  background-size: cover;
+  border-radius: 30%;
+  border: 5px solid #dadada;
+  background-color: #dadada;
 }
