@@ -36,3 +36,9 @@ body {
   border: 5px solid #dadada;
   background-color: #dadada;
 }
+
+.header-color {
+  background-color: #2e5d4b;
+  width: 100%;
+  height: 10%;
+}
