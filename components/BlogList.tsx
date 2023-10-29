@@ -5,8 +5,8 @@ const notoSansKR = Noto_Sans_KR({ weight: "300", subsets: ["latin"] });
 export default function BlogList() {
   return (
     <>
-      <div className="flex flex-warp justify-center mb-4">
-        <div className="flex justify-center border w-1/4 p-8 rounded-lg bg-slate-100">
+      <div className="flex flex-warp justify-center mb-6">
+        <div className="flex justify-center border w-2/6 p-8 rounded-lg bg-slate-100">
           <div className="">
             <h3 className={`text-2xl ${notoSansKR.className}`}>제목</h3>
             <div className={`mt-2 ${notoSansKR.className}`}>
