@@ -43,6 +43,9 @@
       ],
       "@core/*": [
         "./core/*"
+      ],
+      "@pages/*": [
+        "./pages/*"
       ]
     },
     "plugins": [
@@ -57,6 +60,7 @@
     "**/*.tsx",
     "pages/api/orm.js",
     "pages/404.js",
+    "**/pages/*", 
     ".next/types/**/*.ts"
   ],
   "exclude": [

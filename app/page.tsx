@@ -7,7 +7,7 @@ const nanumMyengjo = Nanum_Myeongjo({ weight: "400", subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="flex justify-center flex-col header-color">
+    <main className="flex justify-center flex-col">
       <div className="flex flex-row-reverse m-1 text-[#71717a]">
         <BsArrowClockwise className="ml-1" />
         <span className={`${nanumMyengjo.className} text-xs`}>
