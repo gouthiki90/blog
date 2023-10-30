@@ -2,64 +2,42 @@ import { LiaHashtagSolid } from "react-icons/lia";
 import { Noto_Sans_KR } from "next/font/google";
 import "../../app/globals.css";
 import DetailHeader from "@components/DetailHeader";
+import DetailView from "@components/DetailView";
 
 const notoSansKR = Noto_Sans_KR({ weight: "300", subsets: ["latin"] });
 
-export default function DetailView() {
+export default function Detail() {
   return (
     <>
-      <main className="flex justify-center flex-col">
+      <div className="flex justify-center flex-col">
         {/* 헤더 부분 */}
         <DetailHeader />
 
-        <div className="flex justify-center mb-6">
-          <div className="flex justify-center border h-4/6 w-2/6 p-8 rounded-lg bg-slate-100">
-            <div className="">
-              <h3 className={`text-2xl ${notoSansKR.className} mr-5`}>제목</h3>
-              <p
-                className={`mt-2 ${notoSansKR.className} leading-relaxed text-justify indent-8`}
-              >
-                하나둘셋 하나둘셋하나둘셋하나둘셋하나둘셋
-                하나둘셋하나둘셋하나둘셋 하나둘셋하나둘셋하나둘셋하나둘셋
-                하나둘셋하나둘셋하나둘셋하나둘셋
-                하나둘셋하나둘셋하나둘셋하나둘셋
-                하나둘셋하나둘셋하나둘셋하나둘셋
-                하나둘셋하나둘셋하나둘셋하나둘셋
-                하나둘셋하나둘셋하나둘셋하나둘셋
-                하나둘셋하나둘셋하나둘셋하나둘셋
-                하나둘셋하나둘셋하나둘셋하나둘셋
-                하나둘셋하나둘셋하나둘셋하나둘셋
-                하나둘셋하나둘셋하나둘셋하나둘셋
-                하나둘셋하나둘셋하나둘셋하나둘셋 하나둘셋
-              </p>
-              <div>
-                <ol className="mt-3 flex flex-warp">
-                  <li className="flex mr-2">
-                    <LiaHashtagSolid className="w-5 h-5" />
-                    <span className={`${notoSansKR.className}`}>하나</span>
-                  </li>
-                  <li className="flex mr-2">
-                    <LiaHashtagSolid className="w-5 h-5" />
-                    <span className={`${notoSansKR.className}`}>하나</span>
-                  </li>
-                  <li className="flex mr-2">
-                    <LiaHashtagSolid className="w-5 h-5" />
-                    <span className={`${notoSansKR.className}`}>하나</span>
-                  </li>
-                  <li className="flex mr-2">
-                    <LiaHashtagSolid className="w-5 h-5" />
-                    <span className={`${notoSansKR.className}`}>하나</span>
-                  </li>
-                  <li className="flex mr-2">
-                    <LiaHashtagSolid className="w-5 h-5" />
-                    <span className={`${notoSansKR.className}`}>하나</span>
-                  </li>
-                </ol>
-              </div>
-            </div>
+        <div className="flex justify-items-center justify-evenly">
+          <div className="m-2">
+            <iframe
+              allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+              height="450"
+              width={300}
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+              src="https://embed.music.apple.com/kr/album/hellfire/1613170781"
+            ></iframe>
+          </div>
+          <div className="m-5 w-3/6 h-full flex justify-center">
+            <DetailView />
+          </div>
+          <div className="m-10">
+            <ol>
+              <li>
+                <p>제목</p>
+              </li>
+              <li>
+                <p>소제목</p>
+              </li>
+            </ol>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }

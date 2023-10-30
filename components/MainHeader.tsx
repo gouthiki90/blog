@@ -4,7 +4,7 @@ import BlogLogo from "./ProfileLogo";
 import { AiOutlineMinus } from "react-icons/ai";
 import TagList from "./TagList";
 
-export default function Header() {
+export default function MainHeader() {
   return (
     <div className="flex justify-center">
       <div className="flex flex-col justify-center absolute top-10 bottom-24 left-20 m-2.5">

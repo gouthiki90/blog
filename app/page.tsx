@@ -1,5 +1,5 @@
 import BlogList from "@components/BlogList";
-import Header from "@components/Header";
+import MainHeader from "@components/MainHeader";
 import { BsArrowClockwise } from "react-icons/bs";
 import { Nanum_Myeongjo } from "next/font/google";
 
@@ -15,7 +15,7 @@ export default function Home() {
         </span>
       </div>
       {/* 헤더 부분 */}
-      <Header />
+      <MainHeader />
 
       <div className="flex-auto">
         {/* 글 리스트 */}
