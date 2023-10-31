@@ -1,12 +1,13 @@
 import { LiaHashtagSolid } from "react-icons/lia";
 import { Noto_Sans_KR } from "next/font/google";
+import Link from "next/link";
 
 const notoSansKR = Noto_Sans_KR({ weight: "300", subsets: ["latin"] });
 export default function BlogList() {
   return (
     <>
       <div className="flex flex-warp justify-center mb-6">
-        <a
+        <Link
           href="/detail/page"
           className="flex justify-center border w-2/6 p-8 rounded-lg bg-slate-100"
         >
@@ -43,7 +44,7 @@ export default function BlogList() {
               </div>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import { Noto_Sans_KR } from "next/font/google";
 import "../../app/globals.css";
 import DetailHeader from "@components/DetailHeader";
 import DetailView from "@components/DetailView";
+import Link from "next/link";
 
 const notoSansKR = Noto_Sans_KR({ weight: "300", subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function Detail() {
             ></iframe>
           </div>
           <div className="m-5 w-3/6 h-full flex justify-center">
+            <Link href="/editor/page">글쓰기</Link>
             <DetailView />
           </div>
           <div className="m-10">

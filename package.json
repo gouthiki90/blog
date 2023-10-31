@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@toast-ui/editor": "^3.2.2",
     "next": "13.5.4",
     "next-auth": "^4.24.3",
     "react": "^18",
