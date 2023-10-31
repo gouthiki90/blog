@@ -2,7 +2,7 @@ import React from "react";
 import MenuList from "./MenuList";
 import BlogLogo from "./ProfileLogo";
 import { AiOutlineMinus } from "react-icons/ai";
-import TagList from "./TagList";
+import TagList from "./tags/TagList";
 
 export default function MainHeader() {
   return (

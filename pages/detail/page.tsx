@@ -1,4 +1,3 @@
-import { LiaHashtagSolid } from "react-icons/lia";
 import { Noto_Sans_KR } from "next/font/google";
 import "../../app/globals.css";
 import DetailHeader from "@components/DetailHeader";
