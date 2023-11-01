@@ -27,7 +27,7 @@ export default function MainHeader() {
         {/* 메뉴 */}
         <MenuList />
 
-        <div className="flex justify-center mb-10 text-[#71717a]">
+        <div className="flex justify-center m-4 text-[#71717a]">
           <AiOutlineMinus />
         </div>
 

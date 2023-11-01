@@ -3,6 +3,7 @@ import "../../app/globals.css";
 import DetailHeader from "@components/DetailHeader";
 import DetailView from "@components/DetailView";
 import Link from "next/link";
+import { MyButton } from "@components/button/Button";
 
 const notoSansKR = Noto_Sans_KR({ weight: "300", subsets: ["latin"] });
 
@@ -13,29 +14,43 @@ export default function Detail() {
         {/* 헤더 부분 */}
         <DetailHeader />
 
-        <div className="flex justify-items-center justify-evenly">
-          <div className="m-2">
-            <iframe
-              allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-              height="450"
-              width={300}
-              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-              src="https://embed.music.apple.com/kr/album/hellfire/1613170781"
-            ></iframe>
-          </div>
-          <div className="m-5 w-3/6 h-full flex justify-center">
-            <Link href="/editor/page">글쓰기</Link>
-            <DetailView />
-          </div>
-          <div className="m-10">
-            <ol>
-              <li>
-                <p>제목</p>
-              </li>
-              <li>
-                <p>소제목</p>
-              </li>
-            </ol>
+        <div className="flex flex-col">
+          <div className="flex flex-col justify-center content-center flex-row items-center">
+            <div className="flex w-3/6 h-screen justify-center">
+              <DetailView />
+            </div>
+            <div className="flex justify-evenly items-center content-evenly">
+              <div className="mr-2">
+                <Link href="/editor/page">
+                  <MyButton
+                    iconButton={true}
+                    mode="write"
+                    type="button"
+                    color="bg-zinc-950"
+                  />
+                </Link>
+              </div>
+              <div className="mr-2">
+                <Link href="#">
+                  <MyButton
+                    iconButton={true}
+                    mode="edit"
+                    type="button"
+                    color="bg-violet-400"
+                  />
+                </Link>
+              </div>
+              <div className="mr-2">
+                <Link href="#">
+                  <MyButton
+                    iconButton={true}
+                    mode="delete"
+                    type="button"
+                    color="bg-zinc-300"
+                  />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

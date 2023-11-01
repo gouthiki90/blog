@@ -5,8 +5,9 @@ import DetailHeader from "@components/DetailHeader";
 import "../../app/globals.css";
 import { MyButton } from "@components/button/Button";
 import { TagList } from "@components/tags/TagInputList";
-import { BiDotsHorizontal } from "react-icons/bi";
 import { AddSeriseModal } from "@components/addModal/AddSeriseModal";
+import { Noto_Sans_KR } from "next/font/google";
+const notoSansKR = Noto_Sans_KR({ weight: "400", subsets: ["latin"] });
 
 const MDEditor = dynamic(() => import("@uiw/react-md-editor"), {
   ssr: false,
@@ -31,56 +32,57 @@ const Upload: NextPage = () => {
     <>
       <div className="flex justify-center flex-col">
         <DetailHeader />
-        <div className="flex flex-col w-6/6 h-full m-10">
-          <div className="flex justify-center content-center flex-row items-center">
-            <div>
-              <TagList />
-            </div>
-            <div className="flex">
-              <MyButton
-                onClick={onClickAddButton}
-                mode="add"
-                iconButton={true}
-                value="시리즈만들기"
-                color="bg-zinc-950"
-                type="button"
+        <div className="flex flex-col justify-center mx-20">
+          <form action="post" className="flex flex-col">
+            <div className="flex justify-between items-center mb-5">
+              <input
+                type="text"
+                placeholder="제목"
+                className={`w-full border-none rounded-lg ml-1 font_size p-2 ${notoSansKR.className} outline-0`}
               />
+              <div className="flex">
+                <TagList />
+                <MyButton
+                  onClick={onClickAddButton}
+                  mode="add"
+                  iconButton={true}
+                  color="bg-zinc-950"
+                  type="button"
+                />
+              </div>
             </div>
-          </div>
-          <div className="flex justify-center m-2 content-center flex-row items-center">
-            <BiDotsHorizontal className="h-28" />
-          </div>
-          <form action="post">
-            <div className="flex justify-center">
+            <div>
               <MDEditor
                 height={1200}
-                className="w-4/6 h-full"
+                className="w-full"
                 value={md}
                 onChange={setMd}
               />
             </div>
-            <div className="flex mr-80">
-              {!isLoading && (
-                <MyButton
-                  onClick={onClickSaveButton}
-                  value={saveValue}
-                  color="bg-zinc-950"
-                  type="submit"
-                />
-              )}
-            </div>
+            <div className="flex justify-end content-end">
+              <div className="flex">
+                {!isLoading && (
+                  <MyButton
+                    onClick={onClickSaveButton}
+                    value={saveValue}
+                    color="bg-zinc-950"
+                    type="submit"
+                  />
+                )}
+              </div>
 
-            <div className="flex mr-80">
-              {isLoading && (
-                <MyButton
-                  iconButton={true}
-                  onClick={onClickSaveButton}
-                  value={saveValue}
-                  color="bg-zinc-950"
-                  mode="loading"
-                  type="button"
-                />
-              )}
+              <div className="flex">
+                {isLoading && (
+                  <MyButton
+                    iconButton={true}
+                    onClick={onClickSaveButton}
+                    value={saveValue}
+                    color="bg-zinc-950"
+                    mode="loading"
+                    type="button"
+                  />
+                )}
+              </div>
             </div>
           </form>
 
