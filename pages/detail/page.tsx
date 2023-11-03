@@ -1,24 +1,38 @@
 import { Noto_Sans_KR } from "next/font/google";
 import "../../app/globals.css";
-import DetailHeader from "@components/headers/DetailHeader";
 import DetailView from "@components/DetailView";
 import Link from "next/link";
 import { MyButton } from "@components/button/Button";
+import { MyDetailLayout } from "@components/headers/MyDetailLayout";
+import TagList from "@components/tags/TagList";
 
 const notoSansKR = Noto_Sans_KR({ weight: "300", subsets: ["latin"] });
 
 export default function Detail() {
   return (
     <>
-      <div className="flex justify-center flex-col">
-        {/* 헤더 부분 */}
-        <DetailHeader />
-
-        <div className="flex flex-col">
+      <div className="flex justify-center">
+        <div className="flex justify-evenly p-20">
+          {/* 메뉴랑 네비 */}
+          <div className="flex flex-col">
+            <MyDetailLayout />
+            <div className="p-5">
+              <ol>
+                <li>메뉴</li>
+                <li>메뉴</li>
+                <li>메뉴</li>
+                <li>메뉴</li>
+                <li>메뉴</li>
+                <li>메뉴</li>
+              </ol>
+            </div>
+          </div>
+          {/* 글 뷰 */}
           <div className="flex flex-col justify-center content-center flex-row items-center">
-            <div className="flex w-3/6 justify-center">
+            <div className="flex  justify-center">
               <DetailView />
             </div>
+            {/* 버튼들 */}
             <div className="flex justify-evenly items-center content-evenly">
               <div className="mr-2">
                 <Link href="/editor/page">
@@ -51,6 +65,9 @@ export default function Detail() {
                 </Link>
               </div>
             </div>
+          </div>
+          <div className="flex ml-10">
+            <TagList />
           </div>
         </div>
       </div>

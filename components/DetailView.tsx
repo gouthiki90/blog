@@ -7,7 +7,7 @@ const notoSansKR = Noto_Sans_KR({ weight: "300", subsets: ["latin"] });
 export default function DetailView() {
   return (
     <>
-      <div className="flex justify-center w-5/6 mb-6">
+      <div className="flex justify-center mb-6">
         <div className="flex flex-col border-y-2 p-8 bg-slate-100">
           <div className="flex justify-end">
             <ol className="mt-3 flex flex-warp">

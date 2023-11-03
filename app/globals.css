@@ -37,6 +37,20 @@ body {
   background-color: #dadada;
 }
 
+.blog-logo-nav {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  border-radius: 30%;
+}
+
+.blog-logo-lay {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 30%;
+}
+
 .header-color {
   background-color: #2e5d4b;
   width: 100%;
