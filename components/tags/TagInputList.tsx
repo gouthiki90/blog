@@ -7,7 +7,7 @@ export interface IInput extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const TagList: React.FC<IInput> = ({}) => {
-  const inputClassName = `w-16 border-none rounded-lg ml-1 font_size p-2 ${notoSansKR.className} outline-0`;
+  const inputClassName = `w-16 border-none rounded-lg font_size p-2 ${notoSansKR.className} outline-0`;
   return (
     <>
       <div className="flex m-5">

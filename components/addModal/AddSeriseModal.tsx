@@ -8,8 +8,8 @@ export const AddSeriseModal = () => {
   const inputClassName = `w-60 h-8 p-2 mb-3 ${notoSansKR300.className}`;
   return (
     <>
-      <div className="flex justify-center flex-col absolute fixed bg-zinc-50 h-2/6 w-2/6">
-        <div className="flex justify-center flex-col content-center flex-row items-center">
+      <div className="absolute fixed flex justify-center bg-zinc-50 h-2/6 w-1/6">
+        <div className="flex absolute fixed justify-center flex-col content-center flex-row items-center">
           <div className="">
             <span className={`text-xl ${fontFamily} mb-3`}>시리즈 만들기</span>
           </div>
