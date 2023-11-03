@@ -1,6 +1,6 @@
 import { Noto_Sans_KR } from "next/font/google";
 import "../../app/globals.css";
-import DetailHeader from "@components/DetailHeader";
+import DetailHeader from "@components/headers/DetailHeader";
 import DetailView from "@components/DetailView";
 import Link from "next/link";
 import { MyButton } from "@components/button/Button";
@@ -16,7 +16,7 @@ export default function Detail() {
 
         <div className="flex flex-col">
           <div className="flex flex-col justify-center content-center flex-row items-center">
-            <div className="flex w-3/6 h-screen justify-center">
+            <div className="flex w-3/6 justify-center">
               <DetailView />
             </div>
             <div className="flex justify-evenly items-center content-evenly">
