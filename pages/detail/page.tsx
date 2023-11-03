@@ -29,7 +29,7 @@ export default function Detail() {
           </div>
           {/* 글 뷰 */}
           <div className="flex flex-col justify-center content-center flex-row items-center">
-            <div className="flex  justify-center">
+            <div className="flex justify-center m-5">
               <DetailView />
             </div>
             {/* 버튼들 */}
@@ -66,8 +66,16 @@ export default function Detail() {
               </div>
             </div>
           </div>
-          <div className="flex ml-10">
-            <TagList />
+          <div className="flex m-10">
+            <div className="flex flex-row-reverse mt-5">
+              <iframe
+                allow="autoplay; encrypted-media *; fullscreen *; clipboard-write"
+                height="200"
+                className=""
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                src="https://embed.music.apple.com/kr/album/disco-man/1514025324?i=1514025433"
+              />
+            </div>
           </div>
         </div>
       </div>
