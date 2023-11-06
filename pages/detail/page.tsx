@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MyButton } from "@components/button/Button";
 import { MyDetailLayout } from "@components/headers/MyDetailLayout";
 import TagList from "@components/tags/TagList";
+import { AppleMusicBox } from "@components/music/AppleMusicBox";
 
 const notoSansKR = Noto_Sans_KR({ weight: "300", subsets: ["latin"] });
 
@@ -67,15 +68,10 @@ export default function Detail() {
             </div>
           </div>
           <div className="flex m-10">
-            <div className="flex flex-row-reverse mt-5">
-              <iframe
-                allow="autoplay; encrypted-media *; fullscreen *; clipboard-write"
-                height="200"
-                className=""
-                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                src="https://embed.music.apple.com/kr/album/disco-man/1514025324?i=1514025433"
-              />
-            </div>
+            <AppleMusicBox
+              src="https://music.apple.com/kr/playlist/musicbar/pl.u-gxblMP0F5q12q83"
+              height="400"
+            />
           </div>
         </div>
       </div>
