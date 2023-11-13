@@ -20,18 +20,17 @@ export const HeaderNavigation: NextPage = () => {
             </Link>
           </div>
         </div>
-        <div className="">
-          <div className="flex flex-row-reverse items-center contetnt-center">
-            <div className="flex">
-              <span
-                className={`${nanumMyengjo.className} text-[#71717a] text-xs`}
-              >
-                2023년 10월 27일 5시 14분 업데이트
-              </span>
-              <BsArrowClockwise className="ml-1" />
-            </div>
-            <SearchInput />
+
+        <div className="flex flex-row-reverse items-center contetnt-center">
+          <div className="flex align-middle items-center">
+            <span
+              className={`${nanumMyengjo.className} text-[#71717a] text-midium`}
+            >
+              2023년 10월 27일 5시 14분 업데이트
+            </span>
+            <BsArrowClockwise className="ml-1 text-midium text-[#71717a]" />
           </div>
+          <SearchInput />
         </div>
       </div>
     </>

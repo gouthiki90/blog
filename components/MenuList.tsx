@@ -8,7 +8,7 @@ const notoSansKR = Noto_Sans_KR({ weight: "300", subsets: ["latin"] });
 export default function MenuList() {
   return (
     <>
-      <div className="mb-10">
+      <div className="mb-5">
         <div className="flex justify-center">
           <nav className="my-3">
             <ol className="flex justify-evenly">

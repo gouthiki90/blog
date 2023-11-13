@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-const Home: NextPage = ({ ip }: any) => {
+const Home: NextPage = () => {
   return <Home />;
 };
 

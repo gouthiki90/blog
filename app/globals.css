@@ -64,3 +64,20 @@ body {
 .font_size {
   font-size: 13px;
 }
+
+.load-more-icon {
+  top: -10px;
+  width: 24px;
+  height: 28px;
+  transition: all ease 0.5s;
+
+  &.rotate {
+    transform: rotate(180deg);
+    transition: all ease 1s;
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: all ease 1s;
+}
